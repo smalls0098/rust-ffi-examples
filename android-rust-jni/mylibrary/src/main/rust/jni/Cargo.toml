@@ -1,0 +1,17 @@
+[package]
+name = "local"
+version = "0.1.0"
+edition = "2018"
+authors = ["smalls <smalls0098@gmail.com>"]
+description = "a rust jni"
+license = "Apache-2.0"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+# 核心框架，提供外层调用
+rust-core = { path = "../../../../../../rust-core" }
+jni = "0.19.0"
+android_logger = "0.10.1"
+log = "0.4.14"

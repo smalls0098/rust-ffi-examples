@@ -1,0 +1,26 @@
+[package]
+name = "rust-ios-staticlib"
+version = "0.1.0"
+edition = "2018"
+authors = ["smalls <smalls0098@gmail.com>"]
+description = "a rust build ios staticlib example"
+license = "Apache-2.0"
+keywords = ["rust-ios", "rust-ios-example"]
+
+[lib]
+name = "rust_ios"
+crate-type = ["staticlib"]
+
+[dependencies]
+# 核心框架，提供外层调用
+rust-core = { path = "../rust-core" }
+# 下面可以使用git
+# rust-core = { git = "ssh://gitea.xxxx.com/xxxx/rust-core.git", tag = "0.1.10" }
+
+[profile.release]
+opt-level = 3
+debug = false
+lto = true #"fat", "thin" true
+codegen-units = 1
+incremental = false
+panic = 'abort'

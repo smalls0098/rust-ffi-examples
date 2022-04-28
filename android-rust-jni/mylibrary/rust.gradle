@@ -1,0 +1,32 @@
+apply plugin: 'org.mozilla.rust-android-gradle.rust-android'
+
+cargo {
+    module = "./src/main/rust/jni"
+    libname = "local"
+    targets = [
+            "arm64",
+            "arm",
+            "x86",
+            "x86_64"
+    ]
+    profile = 'release'
+    verbose = false
+    prebuiltToolchains = true
+    apiLevels = [
+            "arm64": 21,
+            "arm": 16,
+            "x86_64": 21,
+            "x86": 16,
+    ]
+    // rust构建工具信息
+    // 由于mac系统缘故，需要自己指定cargo、rustc、python等
+    pythonCommand = "/usr/bin/python3"
+    cargoCommand = "/Users/smalls/.cargo/bin/cargo"
+    rustcCommand = "/Users/smalls/.cargo/bin/rustc"
+}
+
+tasks.whenTaskAdded { task ->
+    if ((task.name == 'javaPreCompileDebug' || task.name == 'javaPreCompileRelease')) {
+        task.dependsOn 'cargoBuild'
+    }
+}

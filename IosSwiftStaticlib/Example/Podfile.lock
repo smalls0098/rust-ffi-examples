@@ -1,0 +1,16 @@
+PODS:
+  - IosSwiftStaticlib (0.1.0)
+
+DEPENDENCIES:
+  - IosSwiftStaticlib (from `../`)
+
+EXTERNAL SOURCES:
+  IosSwiftStaticlib:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  IosSwiftStaticlib: e720e955472129adee3c581803e9c90bb1b8dc37
+
+PODFILE CHECKSUM: 210b413454e63fd15a6928c2a66358fe62ebad7e
+
+COCOAPODS: 1.11.2

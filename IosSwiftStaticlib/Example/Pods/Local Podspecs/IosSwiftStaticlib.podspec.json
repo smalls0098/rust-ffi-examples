@@ -1,0 +1,32 @@
+{
+  "name": "IosSwiftStaticlib",
+  "version": "0.1.0",
+  "summary": "A short description of ios-swift-staticlib.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/smalls0098/rust-ffi",
+  "license": {
+    "type": "Apache-2.0",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "smalls": "smalls0098@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/smalls0098/rust-ffi.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "9.0"
+  },
+  "source_files": "IosSwiftStaticlib/Classes/**/*",
+  "vendored_libraries": "IosSwiftStaticlib/Classes/librust_ios.a",
+  "public_header_files": "IosSwiftStaticlib/Classes/**/*.h",
+  "swift_versions": [
+    "5.0"
+  ],
+  "pod_target_xcconfig": {
+    "ENABLE_BITCODE": "NO",
+    "VALID_ARCHS": "armv7 armv7s x86_64 i386"
+  },
+  "swift_version": "5.0"
+}

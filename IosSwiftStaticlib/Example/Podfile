@@ -1,0 +1,6 @@
+use_frameworks!
+target 'IosSwiftStaticlib_Tests' do
+  pod 'IosSwiftStaticlib', :path => '../'
+  
+  
+end

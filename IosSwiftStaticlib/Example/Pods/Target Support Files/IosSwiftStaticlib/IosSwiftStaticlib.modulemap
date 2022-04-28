@@ -1,0 +1,6 @@
+framework module IosSwiftStaticlib {
+  umbrella header "IosSwiftStaticlib-umbrella.h"
+
+  export *
+  module * { export * }
+}

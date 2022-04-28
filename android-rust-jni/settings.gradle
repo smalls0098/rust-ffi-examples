@@ -1,0 +1,3 @@
+rootProject.name = "android-rust-jni"
+include ':app'
+include ':mylibrary'
